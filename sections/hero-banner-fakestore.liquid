@@ -1,0 +1,107 @@
+{%- liquid
+  assign section_name = "hero-banner"
+  assign wrapper_class = section_name | append: '__wrapper'
+
+  render 'hero-banner-fakestore' section_name: section_name, wrapper_class: wrapper_class, banner_title: section.settings.banner_title, banner_subheading: section.settings.banner_subheading, background_image_mobile: section.settings.background_image_mobile, background_image_desktop: section.settings.background_image_desktop, hero_banner_content_bg_color_mobile: section.settings.hero_banner_content_bg_color_mobile, hero_banner_content_bg_color_desktop: section.settings.hero_banner_content_bg_color_desktop, button1_text: section.settings.button1_text, button1_route: section.settings.button1_route, button2_text: section.settings.button2_text, button2_route: section.settings.button2_route, button3_text: section.settings.button3_text, button3_route: section.settings.button3_route, button4_text: section.settings.button4_text, button4_route: section.settings.button4_route
+ 
+-%}
+
+{% schema %}
+{
+  "name": "Hero Banner Fakestore",
+  "settings": [
+    {
+      "type": "text",
+      "id": "banner_title",
+      "label": "Banner Title",
+      "default": "Banner Title Text"
+    },
+    {
+      "type": "text",
+      "id": "banner_subheading",
+      "label": "Subheading",
+      "default": "Banner Subheading Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Background Image on mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_desktop",
+      "label": "Background Image on desktop"
+    },
+    {
+      "type": "color",
+      "id": "hero_banner_content_bg_color_mobile",
+      "label": "Mobile: Pick the color for the background color for the content",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "hero_banner_content_bg_color_desktop",
+      "label": "Desktop: Pick the color for the background color for the content",
+      "default": "transparent"
+    },
+    {
+      "type": "text",
+      "id": "button1_text",
+      "label": "Button 1 Text",
+      "default": "Button 1 Text",
+      "info": "Enter text for the first button here."
+    },
+    {
+      "type": "url",
+      "id": "button1_route",
+      "label": "Button 1 URL",
+      "info": "Choose or type the url that the first button will navigate to."
+    },
+    {
+      "type": "text",
+      "id": "button2_text",
+      "label": "Button 2 Text",
+      "default": "Button 2 Text",
+      "info": "Enter text for the second button here."
+    },
+    {
+      "type": "url",
+      "id": "button2_route",
+      "label": "Button 2 URL",
+      "info": "Choose or type the url that the second button will navigate to."
+    },
+    {
+      "type": "text",
+      "id": "button3_text",
+      "label": "Button 3 Text",
+      "default": "Button 3 Text",
+      "info": "Enter text for the third button here."
+    },
+    {
+      "type": "url",
+      "id": "button3_route",
+      "label": "Button 3 URL",
+      "info": "Choose or type the url that the third button will navigate to."
+    },
+    {
+      "type": "text",
+      "id": "button4_text",
+      "label": "Button 4 Text",
+      "default": "Button 4 Text",
+      "info": "Enter text for the fourth button here."
+    },
+    {
+      "type": "url",
+      "id": "button4_route",
+      "label": "Button 4 URL",
+      "info": "Choose or type the url that the fourth button will navigate to."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner Fakestore",
+      "category": "Hero Sections"
+    }
+  ]
+}
+{% endschema %}

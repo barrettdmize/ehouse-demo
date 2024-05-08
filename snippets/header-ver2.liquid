@@ -1,0 +1,76 @@
+{% comment %} {%- liquid
+  assign home_label = 'general.aria.shop_home' | t
+  assign navigation_label = "general.aria.shop_navigation" | t
+  assign shop_home = shop.name | append: ' ' | append: home_label
+  assign shop_home_navigation = shop_home | append: ' ' | append: navigation_label
+  capture header_logo
+    render 'site-logo', site_logo_image: logo_image, site_logo_max_width: logo_max_width, site_logo_in_header: true
+  endcapture
+-%} {% endcomment %}
+
+<header class="site-header">
+    <div class="header-top">
+        {% comment %}
+        <a href="/" class="logo-link">
+            <img src="{{ 'logo.png' | asset_url }}" alt="Site Logo">
+        </a>
+        {% endcomment %}
+
+        {% if logo %}
+        <img src="{{ logo | img_url:'master' }}" width="{{ logo_max_width }}" height="26px" alt="{{ shop.name }} Logo" class="site-header_logo-image">
+        {% else %}
+        <span>{{ shop.name }}</span>
+        {% endif %}
+
+        <nav class="main-navigation d-none d-sm-block" role="navigation">
+            {% for link in linklists.main-menu.links %}
+            <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
+            {% endfor %}
+        </nav>
+
+        <div class="header-actions">
+            <a href="/search" class="search-icon d-none d-sm-block">Search</a>
+            {% comment %} <a href="/cart" class="cart-icon">Cart ({{ cart.item_count }})</a> {% endcomment %}
+        </div>
+    </div>
+</header>
+
+{%- style -%}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+
+    .logo-link img {
+        height: 50px; // Adjust size as needed
+    }
+
+    .main-navigation {
+        display: flex;
+
+        .nav-link {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+    }
+
+    .header-actions {
+        display: flex;
+
+        a {
+            padding-left: 15px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main-navigation {
+        display: none; // Example of a simple responsive adjustment
+    }
+}
+
+{%- endstyle -%}

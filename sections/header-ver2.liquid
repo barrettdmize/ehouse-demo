@@ -1,0 +1,94 @@
+
+
+  {%- render 'header-ver2',
+    logo: section.settings.logo,
+    logo_max_width: section.settings.logo_max_width,
+    navigation_main_handle: section.settings.navigation_main_handle,
+    enable_nav_tags: section.settings.enable_nav_tags,
+    enable_account: section.settings.enable_account,
+    enable_search: section.settings.enable_search -%}
+
+  {% comment %} {%- render 'header-styles',
+    logo_max_width: section.settings.logo_max_width,
+    logo_max_width_mobile: section.settings.logo_max_width_mobile -%} {% endcomment %}
+
+{% schema %}
+  {
+    "name": "Header-ver2",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header Section"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo Image Mobile",
+        "info": "Upload the logo here."
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_desktop",
+        "label": "Logo Image Desktop",
+        "info": "Upload the logo here."
+      },
+      {
+        "type": "header",
+        "content": "Logo",
+        "info": "Settings for the logo."
+      },
+      {
+        "type": "range",
+        "id": "logo_max_width_mobile",
+        "min": 50,
+        "max": 200,
+        "step": 5,
+        "unit": "px",
+        "label": "Logo Max Width Mobile",
+        "default": 90
+      },
+      {
+        "type": "range",
+        "id": "logo_max_width",
+        "min": 50,
+        "max": 350,
+        "step": 5,
+        "unit": "px",
+        "label": "Logo Max Width",
+        "default": 130
+      },
+      {
+        "type": "link_list",
+        "id": "navigation_main_handle",
+        "label": "Navigation Main Menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "header",
+        "content": "Header nav tags"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_nav_tags",
+        "label": "Enable navigation tags",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Manage Menu"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_account",
+        "label": "Enable account",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_search",
+        "label": "Enable search",
+        "default": false
+      }
+    ]
+  }
+{% endschema %}

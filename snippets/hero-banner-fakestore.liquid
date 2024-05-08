@@ -1,0 +1,56 @@
+<section id="{{ section_name }}-{{ section.id }}" class="{{ section_name }} d-md-flex flex-md-column align-items-md-center" style="
+  --background-image-mobile: url('{{ background_image_mobile | img_url: "master" }}');
+  --background-image-desktop: url('{{ background_image_desktop | img_url: "master" }}');">
+  <div class="hero-banner__content-wrapper" style="
+    --hero-banner-content-bg-color-mobile: {{ hero_banner_content_bg_color_mobile }};
+    --hero-banner-content-bg-color-desktop: {{ hero_banner_content_bg_color_desktop }};">
+    <div class="hero-banner__content">
+      {% comment %} Banner Subheading {% endcomment %}
+      {% if banner_subheading != '' %}
+        <p class="hero-banner__subheading">{{ banner_subheading }}</p>
+      {% endif %}
+      
+      {% comment %} Banner Title {% endcomment %}
+      {% if banner_title != '' %}
+        <h1 class="hero-banner__title font-weight-bold">{{ banner_title }}</h1>
+      {% endif %}
+
+      {% comment %} Button Grid {% endcomment %}
+      <div class="col-12">
+        <div class="row text-center">
+          {% if button1_text != '' and button1_route != '' %}
+            <div class="col-6 col-md-3 hero-banner__button-container">
+              <a href="{{ button1_route }}" class="btn btn-dark btn-block hero-banner__button">
+                {{ button1_text }}
+              </a>
+            </div>
+          {% endif %}
+          
+          {% if button2_text != '' and button2_route != '' %}
+            <div class="col-6 col-md-3 hero-banner__button-container">
+              <a href="{{ button2_route }}" class="btn btn-dark btn-block hero-banner__button">
+                {{ button2_text }}
+              </a>
+            </div>
+          {% endif %}
+          
+          {% if button3_text != '' and button3_route != '' %}
+            <div class="col-6 col-md-3 hero-banner__button-container">
+              <a href="{{ button3_route }}" class="btn btn-dark btn-block hero-banner__button">
+                {{ button3_text }}
+              </a>
+            </div>
+          {% endif %}
+          
+          {% if button4_text != '' and button4_route != '' %}
+            <div class="col-6 col-md-3 hero-banner__button-container">
+              <a href="{{ button4_route }}" class="btn btn-dark btn-block hero-banner__button">
+                {{ button4_text }}
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

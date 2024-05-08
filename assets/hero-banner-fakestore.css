@@ -1,0 +1,92 @@
+.hero-banner {
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+  margin-bottom: 450px;
+  background-image: var(--background-image-mobile);
+}
+
+@media (min-width: 768px) {
+  .hero-banner {
+    background-image: var(--background-image-desktop);
+    height: 650px;
+    margin-bottom: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-banner {
+    margin-bottom: 50px;
+  }
+}
+
+.hero-banner__content-wrapper {
+  background: var(--hero-banner-content-bg-color-mobile);
+  border: 1px solid black;
+  padding: 20px;
+  margin: 0 10px -300px 10px;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .hero-banner__content-wrapper {
+    background: var(--hero-banner-content-bg-color-desktop);
+    border: none;
+    margin: 0 10px -120px 10px;
+    min-width: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-banner__content-wrapper {
+    margin: 120px 400px 0px 0px;
+  }
+}
+
+.hero-banner__content {
+  text-align: center;
+}
+
+.hero-banner__subheading {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.hero-banner__title {
+  font-size: 43px;
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .hero-banner__title {
+    font-size: 60px;
+  }
+}
+
+.hero-banner__button-container {
+padding: 0 10px 0 10px;
+}
+
+
+.hero-banner__button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero-banner__button:hover {
+  background-color: #333;
+}
