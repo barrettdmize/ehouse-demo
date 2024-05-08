@@ -39,3 +39,8 @@ user-friendliness through responsive designs and dynamic customization via the S
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/barrettdmize/ehouse-demo.git
+2. **Navigate to Your Local Theme Directory:**
+   ```bash
+   cd ehouse-demo
+3. **Upload to Shopify:**
+Upload the relevant files to your Shopify store through the Shopify Theme Editor or use a tool like the Shopify CLI.
