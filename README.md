@@ -11,7 +11,6 @@ a responsive, user-friendly experience.
 - [Features](#features)
 - [Setup and Installation](#setup-and-installation)
 - [Usage Instructions](#usage-instructions)
-- [Contact Information](#contact-information)
 
 ## Project Overview
 The project focused on creating a customizable hero banner section and enhancing 
