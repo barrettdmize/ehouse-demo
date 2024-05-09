@@ -10,7 +10,6 @@ a responsive, user-friendly experience.
 - [File Structure](#file-structure)
 - [Features](#features)
 - [Setup and Installation](#setup-and-installation)
-- [Usage Instructions](#usage-instructions)
 
 ## Project Overview
 The project focused on creating a customizable hero banner section and enhancing 
